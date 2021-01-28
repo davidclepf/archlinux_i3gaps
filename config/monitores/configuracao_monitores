@@ -1,0 +1,15 @@
+Após algumas pesquisas na wiki do Arch Linux eu consegui resolver da seguinte forma:
+
+Criei um arquivo de configuração /etc/X11/xorg.conf.d/10-monitor.conf contendo os seguintes parâmetros:
+
+Section "Monitor"
+Identifier "HDMI-2"
+Modeline "1680x1050_60.00" 146.25 1680 1784 1960 2240 1050 1053 1059 1089 -hsync +vsync
+Option "PreferredMode" "1680x1050_60.00"
+Option "LeftOf" "eDP-1"
+Option "DPMS" "true"
+EndSection
+
+Obs: não inclui as configurações do eDP-1 (monitor no notebook), pois ele já estava carregando corretamente.
+
+fonte: https://wiki.archlinux.org/index.php/Multihead
