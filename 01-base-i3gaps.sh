@@ -26,5 +26,5 @@ sudo pacman -S xorg \
 	bluez-hid2hci \
 	bash-completion \
 	udiskie \
-	
+	git \	
 		
